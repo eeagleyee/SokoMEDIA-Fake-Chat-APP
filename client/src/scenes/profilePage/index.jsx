@@ -16,7 +16,7 @@ const ProfilePage = () => {
 
   const getUser = async () => {
     const response = await fetch(
-      `${process.env.VITE_API_URL}/users/${userId}`,
+      `${import.meta.env.VITE_API_URL}/users/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

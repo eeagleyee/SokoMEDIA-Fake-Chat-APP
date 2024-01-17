@@ -10,7 +10,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`${process.env.VITE_API_URL}/assets/${image}`}
+        src={`${import.meta.env.VITE_API_URL}/assets/${image}`}
       />
     </Box>
   );
