@@ -25,7 +25,9 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const patchFriend = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${"65a78b3f4789ae02a0a4935f"}/${friendId}`,
+        `${
+          process.env.VITE_API_URL
+        }/users/${"65a78b3f4789ae02a0a4935f"}/${friendId}`,
         {
           method: "PATCH",
           headers: {

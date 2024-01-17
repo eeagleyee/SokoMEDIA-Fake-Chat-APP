@@ -17,7 +17,7 @@ const FriendListWidget = ({ userId }) => {
   const getFriends = useCallback(async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${userId}/friends`,
+        `${process.env.VITE_API_URL}/${userId}/friends`,
         {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
