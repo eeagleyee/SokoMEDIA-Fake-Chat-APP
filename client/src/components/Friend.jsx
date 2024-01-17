@@ -10,7 +10,7 @@ import UserImage from "./UserImage";
 const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { _id } = useSelector((state) => state.user);
+  // const { _id } = useSelector((state) => state.user);
   const token = useSelector((state) => state.token);
   const friends = useSelector((state) => state.user.friends);
 
@@ -20,12 +20,12 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
   const main = palette.neutral.main;
   const medium = palette.neutral.medium;
 
-  const isFriend = friends.find((friend) => friend._id === friendId);
+  const isFriend = friends?.find((friend) => friend._id === friendId);
 
   const patchFriend = async () => {
     try {
       const response = await fetch(
-        `http://localhost:3001/users/${_id}/${friendId}`,
+        `http://localhost:3001/users/${"65a78b3f4789ae02a0a4935f"}/${friendId}`,
         {
           method: "PATCH",
           headers: {
@@ -34,6 +34,8 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
           },
         }
       );
+
+      console.log(response);
 
       if (!response.ok) {
         if (response.status === 404) {

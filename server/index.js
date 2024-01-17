@@ -34,11 +34,11 @@ import { users, posts } from "./data/index.js";
 // const { register } = require("./controllers/auth.js");
 // const { createPost } = require("./controllers/posts.js");
 // const { verifyToken } = require("./middleware/auth.js");
-
+dotenv.config();
 // CONFIGURATIONS
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-dotenv.config();
+
 const app = express();
 app.use(express.json());
 app.use(helmet());
