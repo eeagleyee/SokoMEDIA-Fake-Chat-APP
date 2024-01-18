@@ -79,8 +79,9 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
+    console.log(login);
     const loggedInResponse = await fetch(
-      `${import.meta.env.VITE_API_URL}/auth/login`,
+      `https://soko-media-chat-app-api.vercel.app/auth/login`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
