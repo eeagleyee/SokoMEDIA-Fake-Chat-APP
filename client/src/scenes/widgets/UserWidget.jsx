@@ -24,7 +24,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const getUser = async () => {
     const response = await fetch(
-      `${import.meta.env.VITE_API_URL}/users/${userId}`,
+      `https://soko-media-chat-app-api.vercel.app/users/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

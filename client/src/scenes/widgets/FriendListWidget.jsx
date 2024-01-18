@@ -17,7 +17,7 @@ const FriendListWidget = ({ userId }) => {
   const getFriends = useCallback(async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/${userId}/friends`,
+        `https://soko-media-chat-app-api.vercel.app/${userId}/friends`,
         {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },

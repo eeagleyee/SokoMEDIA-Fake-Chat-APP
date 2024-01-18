@@ -64,7 +64,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      `${import.meta.env.VITE_API_URL}/auth/register`,
+      `https://soko-media-chat-app-api.vercel.app/auth/register`,
       {
         method: "POST",
         body: formData,

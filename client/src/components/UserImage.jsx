@@ -10,7 +10,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`${import.meta.env.VITE_API_URL}/assets/${image}`}
+        src={`https://soko-media-chat-app-api.vercel.app/assets/${image}`}
       />
     </Box>
   );
